@@ -1,0 +1,110 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+}
+
+body {
+  background: #dedede;
+}
+
+.tiles-container {
+  width: 100%;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px 32px;
+  padding: 20px 0;
+}
+
+.tiles-container .tile {
+  border-radius: 20px;
+  width: 320px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.tiles-container .tile.large {
+  display: none;
+}
+
+.tiles-container .tile h2 {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 10px;
+}
+
+.tiles-container .tile img {
+  width: 100%;
+  height: 340px;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.tiles-container .tile footer {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.tiles-container .tile footer a {
+  color: #e61577;
+}
+
+.tiles-container .tile footer sup {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+@media only screen and (min-width: 689px) {
+  .tiles-container .tile {
+    display: none;
+  }
+  .tiles-container .tile.large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 320px;
+    background-size: cover;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .tiles-container .tile.large .gradient {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, white), to(transparent));
+    background: linear-gradient(360deg, white 20%, transparent);
+    padding-top: 50px;
+    border-radius: 0 0 20px 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
